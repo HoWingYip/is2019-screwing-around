@@ -1,0 +1,17 @@
+h1 {
+  margin: 0 0;
+}
+
+h2 {
+  margin: 0 0;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* specialised code for other elements*/
+#posting-letter {
+  filter: saturate(1000%) blur(10px);
+}
