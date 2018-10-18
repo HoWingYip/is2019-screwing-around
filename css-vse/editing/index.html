@@ -5,16 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="w3.css"/>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
+  <script type="text/javascript" src="scripts.js"></script>
   <title>CSS VSE - Editing/Compositing</title>
 </head>
 <body>
   <h1 class="w3-container w3-padding-large w3-teal">CSS VSE - Editing/Compositing</h1>
   <h2 class="w3-container w3-padding">Colour Grading/Effects (CSS Filters)</h2>
-  <div id="video-container" class="w3-margin">
-    <video width="960" height="540" id="posting-letter" src="../assets/PostingLetter.MOV" controls>
-      Video not displayed. 
-    </video>
-  </div>
+    <div class="test-wrapper w3-margin w3-round-large">
+      <div id="video-container">
+        <video width="1152" height="648" id="posting-letter" src="../assets/PostingLetter.MOV" controls>
+        Video not displayed.
+        </video>
+      </div>
+      <div class="controls-wrapper w3-round-large">
+        <h2>Controls</h2>
+        <h3 class="control-header">Grayscale</h3>
+        <input type="number" id="grayscaleControl" class="effectTextBox w3-round" min="0" max="100"><br>
+        <div class="invalidValueAlertGrayscale w3-margin-bottom">Please input a number from 0-100.</div><br>
+        <button class="w3-button w3-border w3-round effectButton" onclick="setGrayscale()">Set</button>
+        <h3 class="control-header">Saturation</h3>
+        <input type="number" id="saturationControl" class="effectTextBox w3-round" min="0"><br>
+        <div class="invalidValueAlertSaturation w3-margin-bottom">Please input a number greater than 0.</div><br>
+        <button class="w3-button w3-border w3-round effectButton" onclick="setSaturation()">Set</button>
+      </div>
+    </div>
 </body>
 </html>

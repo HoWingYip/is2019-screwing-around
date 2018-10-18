@@ -6,12 +6,45 @@ h2 {
   margin: 0 0;
 }
 
-video {
-  display: block;
-  margin: 0 auto;
+/* specialised code for other elements*/
+.test-wrapper {
+  border: 5px solid grey;
+  padding: 16px;
 }
 
-/* specialised code for other elements*/
-#posting-letter {
-  filter: saturate(1000%) blur(10px);
+.test-wrapper > * {
+  vertical-align: top;
+}
+
+#video-container {
+  display: inline-block;
+  padding: 16px;
+}
+
+.effectButton {
+  font-size: 24px;
+  display: inline-block;
+  width: 93px;
+}
+
+.effectTextBox {
+  font-size: 24px;
+  display: inline-block;
+  resize: none;
+  width: 93px;
+  padding: 8px;
+}
+
+.controls-wrapper {
+  padding: 16px;
+  display: inline-block;
+}
+
+.control-header {
+  margin-top: 32px;
+}
+
+.invalidValueAlertGrayscale, .invalidValueAlertSaturation {
+  color: red;
+  display: none;
 }
