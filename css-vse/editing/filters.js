@@ -53,7 +53,7 @@ function setSaturation() {
 
   existingFilterAttributes = video.style.filter.split(" ");
   //returns existing filter attributes as array
-  //cycle through each one to check for grayscale
+  //cycle through each one to check for saturation
   //then set it
   for(attributeNum in existingFilterAttributes) {
     if(existingFilterAttributes[attributeNum].includes("saturate")) {
