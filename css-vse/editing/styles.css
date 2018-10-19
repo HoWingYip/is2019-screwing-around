@@ -44,7 +44,7 @@ h2 {
   margin-top: 32px;
 }
 
-.invalidValueAlertGrayscale, .invalidValueAlertSaturation {
+#invalidValueAlertGrayscale, #invalidValueAlertSaturation {
   color: red;
   display: none;
 }

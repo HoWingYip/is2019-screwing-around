@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="w3.css"/>
   <link rel="stylesheet" href="styles.css"/>
   <script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="filters.js"></script>
   <title>CSS VSE - Editing/Compositing</title>
 </head>
 <body>
@@ -22,11 +23,11 @@
         <h2>Controls</h2>
         <h3 class="control-header">Grayscale</h3>
         <input type="number" id="grayscaleControl" class="effectTextBox w3-round" min="0" max="100"><br>
-        <div class="invalidValueAlertGrayscale w3-margin-bottom">Please input a number from 0-100.</div><br>
+        <div id="invalidValueAlertGrayscale" class="w3-margin-bottom">Please input a number from 0-100.</div><br>
         <button class="w3-button w3-border w3-round effectButton" onclick="setGrayscale()">Set</button>
         <h3 class="control-header">Saturation</h3>
         <input type="number" id="saturationControl" class="effectTextBox w3-round" min="0"><br>
-        <div class="invalidValueAlertSaturation w3-margin-bottom">Please input a number greater than 0.</div><br>
+        <div id="invalidValueAlertSaturation" class="w3-margin-bottom">Please input a number greater than 0.</div><br>
         <button class="w3-button w3-border w3-round effectButton" onclick="setSaturation()">Set</button>
       </div>
     </div>
