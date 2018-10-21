@@ -79,3 +79,37 @@ function setSaturation() {
   enterAllAttributes(existingFilterAttributes, video);
   //applies CSS filters to video
 }
+
+function setContrast() {
+  //gets video
+  var video = document.getElementById("posting-letter");
+  //console.log(video);
+  //gets contrast value from contrast control
+  var conValue = document.getElementById("contrastControl").value;
+
+  invalidValueAlert(conValue, "invalidValueAlertContrast", 0, Infinity);
+  //no max value (for deep-frying purposes) so max value is infinity
+  
+  //if no filters have been set...
+  if(video.style.filter === "") {
+    video.style.filter = "contrast(" + conValue + "%)";
+    console.log(`No filters previously set. Directly applying filter "contrast(${conValue}%)".`);
+    return;
+    //immediately exits function (no filters set)
+  }
+
+  existingFilterAttributes = video.style.filter.split(" ");
+  //returns existing filter attributes as array
+  //cycle through each one to check for contrast
+  //then set it
+  for(attributeNum in existingFilterAttributes) {
+    if(existingFilterAttributes[attributeNum].includes("contrast")) {
+      existingFilterAttributes[attributeNum] = "contrast(" + conValue + "%)";
+      //sets attribute value IN ARRAY ONLY to user-inputted value
+    } else {
+      existingFilterAttributes.push("contrast(" + conValue + "%)");
+    }
+  }
+
+  enterAllAttributes(existingFilterAttributes, video);
+}
