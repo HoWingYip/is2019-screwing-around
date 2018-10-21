@@ -35,7 +35,13 @@ h2 {
   padding: 8px;
 }
 
+.controlGroup {
+  display: inline-block;
+  margin-right: 10%;
+}
+
 .controls-wrapper {
+  width: 30%;
   padding: 16px;
   display: inline-block;
 }
@@ -44,7 +50,8 @@ h2 {
   margin-top: 32px;
 }
 
-#invalidValueAlertGrayscale, #invalidValueAlertSaturation {
+.invalidValueAlerts {
   color: red;
   display: none;
+  width: 93px;
 }
