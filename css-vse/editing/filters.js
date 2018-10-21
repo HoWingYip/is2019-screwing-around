@@ -22,6 +22,7 @@ function setGrayscale() {
   //if no filters have been set...
   if(video.style.filter === "") {
     video.style.filter = "grayscale(" + gsValue + "%)";
+    console.log(`No filters previously set. Directly applying filter "grayscale(${gsValue}%)".`);
     return;
     //immediately exits function (no filters set)
   }
@@ -57,6 +58,7 @@ function setSaturation() {
   //if no filters have been set...
   if(video.style.filter === "") {
     video.style.filter = "saturate(" + satValue + "%)";
+    console.log(`No filters previously set. Directly applying filter "saturate(${satValue}%)".`);
     return;
     //immediately exits function (no filters set)
   }
