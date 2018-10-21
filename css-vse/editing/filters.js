@@ -19,6 +19,13 @@ function setGrayscale() {
   //checks whether value entered is valid, displays alert if invalid
   invalidValueAlert(gsValue, "invalidValueAlertGrayscale", 0, 100);
 
+  //if no filters have been set...
+  if(video.style.filter === "") {
+    video.style.filter = "grayscale(" + gsValue + "%)";
+    return;
+    //immediately exits function (no filters set)
+  }
+
   existingFilterAttributes = video.style.filter.split(" ");
   //returns existing filter attributes as array
   //cycle through each one to check for grayscale
@@ -28,12 +35,8 @@ function setGrayscale() {
     if(existingFilterAttributes[attributeNum].includes("grayscale")) {
       existingFilterAttributes[attributeNum] = "grayscale(" + gsValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
-    }
-
-    //if no filters have been set...
-    if(existingFilterAttributes.length <= 1) {
-      existingFilterAttributes[0] = "grayscale(" + gsValue + "%)";
-      //add grayscale property to array (grayscale property will be set later!)
+    } else {
+      existingFilterAttributes.push("grayscale(" + gsValue + "%)");
     }
   }
 
@@ -48,8 +51,15 @@ function setSaturation() {
   var satValue = document.getElementById("saturationControl").value;
   //gets value of saturation control textarea
   
-  invalidValueAlert(satValue, "invalidValueAlertSaturation", 0, Number.MAX_SAFE_INTEGER);
-  //no max value (for deep-frying purposes) so max value is largest possible int
+  invalidValueAlert(satValue, "invalidValueAlertSaturation", 0, Infinity);
+  //no max value (for deep-frying purposes) so max value is infinity
+
+  //if no filters have been set...
+  if(video.style.filter === "") {
+    video.style.filter = "saturate(" + satValue + "%)";
+    return;
+    //immediately exits function (no filters set)
+  }
 
   existingFilterAttributes = video.style.filter.split(" ");
   //returns existing filter attributes as array
@@ -59,11 +69,8 @@ function setSaturation() {
     if(existingFilterAttributes[attributeNum].includes("saturate")) {
       existingFilterAttributes[attributeNum] = "saturate(" + satValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
-    }
-
-    //if no filters have been set...
-    if(existingFilterAttributes.length <= 1) {
-      existingFilterAttributes[0] = "saturate(" + satValue + "%)";
+    } else {
+      existingFilterAttributes.push("saturate(" + satValue + "%)");
     }
   }
 

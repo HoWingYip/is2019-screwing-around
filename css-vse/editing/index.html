@@ -22,11 +22,11 @@
       <div class="controls-wrapper w3-round-large">
         <h2>Controls</h2>
         <h3 class="control-header">Grayscale</h3>
-        <input type="number" id="grayscaleControl" class="effectTextBox w3-round" min="0" max="100"><br>
+        <input type="number" id="grayscaleControl" class="effectTextBox w3-round" min="0" max="100" value="0"> %<br>
         <div id="invalidValueAlertGrayscale" class="w3-margin-bottom">Please input a number from 0-100.</div><br>
         <button class="w3-button w3-border w3-round effectButton" onclick="setGrayscale()">Set</button>
         <h3 class="control-header">Saturation</h3>
-        <input type="number" id="saturationControl" class="effectTextBox w3-round" min="0"><br>
+        <input type="number" id="saturationControl" class="effectTextBox w3-round" min="0" value="100"> %<br>
         <div id="invalidValueAlertSaturation" class="w3-margin-bottom">Please input a number greater than 0.</div><br>
         <button class="w3-button w3-border w3-round effectButton" onclick="setSaturation()">Set</button>
       </div>

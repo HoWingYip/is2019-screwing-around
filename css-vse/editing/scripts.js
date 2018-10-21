@@ -1,6 +1,6 @@
 //checks validity of value entered
 /*
-arguments: value to check, css id of alert, min value of filter
+arguments: value to check, CSS id of alert, min value of filter
 attribute, max value of filter attribute
 */
 function invalidValueAlert(value, elementId, min, max) {
