@@ -10,6 +10,7 @@ h2 {
 .test-wrapper {
   border: 5px solid grey;
   padding: 16px;
+  width: auto;
 }
 
 .test-wrapper > * {
@@ -19,6 +20,8 @@ h2 {
 #video-container {
   display: inline-block;
   padding: 16px;
+  width: 58%;
+  height: 100%;
 }
 
 .effectButton {
@@ -37,11 +40,16 @@ h2 {
 
 .controlGroup {
   display: inline-block;
-  margin-right: 10%;
+  margin-right: 25px;
+}
+
+.controlGroupLast {
+  display: inline-block;
+  margin-right: 0;
 }
 
 .controls-wrapper {
-  width: 30%;
+  width: calc(40%-40px);
   padding: 16px;
   display: inline-block;
 }
