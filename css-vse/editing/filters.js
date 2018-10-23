@@ -31,7 +31,7 @@ function setGrayscale() {
   //returns existing filter attributes as array
   //cycle through each one to check for grayscale
   //then set it
-  for(attributeNum in existingFilterAttributes) {
+  for(var attributeNum in existingFilterAttributes) {
     //checks if there is existing grayscale attribute
     if(existingFilterAttributes[attributeNum].includes("grayscale")) {
       existingFilterAttributes[attributeNum] = "grayscale(" + gsValue + "%)";
@@ -67,7 +67,7 @@ function setSaturation() {
   //returns existing filter attributes as array
   //cycle through each one to check for saturation
   //then set it
-  for(attributeNum in existingFilterAttributes) {
+  for(var attributeNum in existingFilterAttributes) {
     if(existingFilterAttributes[attributeNum].includes("saturate")) {
       existingFilterAttributes[attributeNum] = "saturate(" + satValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
@@ -102,7 +102,7 @@ function setContrast() {
   //returns existing filter attributes as array
   //cycle through each one to check for contrast
   //then set it
-  for(attributeNum in existingFilterAttributes) {
+  for(var attributeNum in existingFilterAttributes) {
     if(existingFilterAttributes[attributeNum].includes("contrast")) {
       existingFilterAttributes[attributeNum] = "contrast(" + conValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
