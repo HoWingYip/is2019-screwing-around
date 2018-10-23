@@ -17,11 +17,20 @@ h2 {
   vertical-align: top;
 }
 
-#video-container {
+#video-container, #video-container-fullwidth {
   display: inline-block;
   padding: 16px;
-  width: 58%;
   height: 100%;
+}
+
+#video-container {
+  width: 58%;
+  position: relative;
+}
+
+#video-container-fullwidth {
+  width: 100%;
+  position: relative;
 }
 
 .effectButton {
@@ -62,4 +71,16 @@ h2 {
   color: red;
   display: none;
   width: 93px;
+}
+
+.below {
+  position: absolute;
+  float: left;
+  z-index: -1;
+}
+
+.above {
+  position: absolute;
+  float: right;
+  z-index: 10;
 }
