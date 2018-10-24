@@ -44,16 +44,20 @@
     </div>
 
     <h2 class="w3-container w3-padding">Compositing (Superimposing Video)</h2>
-    <div class="test-wrapper w3-margin w3-round-large">
+    <div class="test-wrapper-split w3-margin w3-round-large">
       <div id="video-container-fullwidth">
-        <video width="100%" height="100%" id="posting-letter" class="below" src="../assets/Walking.MOV" controls>
-        Video not displayed.
-        </video>
-        <video width="25%" height="25%" id="posting-letter" class="above" src="../assets/PostingLetter.MOV" controls>
-        Video not displayed.
-        </video>
+        <div class="split-one">
+          <video width="100%" height="100%" id="walking" class="below" src="../assets/Walking.MOV" controls>
+          Video not displayed.
+          </video>
+        </div>
+        <div class="split-two">
+          <video width="100%" height="100%" id="posting-letter-2" class="above" src="../assets/PostingLetter.MOV" controls>
+          Video not displayed.
+          </video>
+        </div>
+        <!--TODO: opacity controls for video being superimposed.-->
       </div>
-      <!--TODO: Make invalidValueAlerts look a bit nicer (don't make them shift the entire controlGroup)-->
     </div>
 </body>
 </html>

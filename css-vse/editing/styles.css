@@ -6,10 +6,13 @@ h2 {
   margin: 0 0;
 }
 
+video {
+  display: block;
+}
+
 /* specialised code for other elements*/
-.test-wrapper {
+.test-wrapper, .test-wrapper-split {
   border: 5px solid grey;
-  padding: 16px;
   width: auto;
 }
 
@@ -17,20 +20,29 @@ h2 {
   vertical-align: top;
 }
 
+.test-wrapper {
+  padding: 16px;
+}
+
+.test-wrapper-split {
+  padding: 0px;
+}
+
 #video-container, #video-container-fullwidth {
   display: inline-block;
-  padding: 16px;
   height: 100%;
 }
 
 #video-container {
   width: 58%;
+  padding: 16px;
   position: relative;
 }
 
 #video-container-fullwidth {
   width: 100%;
-  position: relative;
+  /*text-align: center;*/
+  /*position: relative;*/
 }
 
 .effectButton {
@@ -74,13 +86,42 @@ h2 {
 }
 
 .below {
-  position: absolute;
-  float: left;
-  z-index: -1;
+  /*position: absolute;*/
+  /*float: left;*/
+  z-index: 1;
+  display: inline-block;
 }
 
 .above {
-  position: absolute;
-  float: right;
-  z-index: 10;
+  float: left;
+  z-index: 2;
+}
+
+.split-one, .split-two {
+  vertical-align: bottom;
+  text-align: center;
+  position: relative;
+  margin: 0 0;
+  padding: 16px;
+  display: inline-block;
+}
+
+.split-one {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  /* I am the worst web developer to ever walk the face of the Earth. */
+  width: 70%;
+  border-left: 5px solid grey;
+}
+
+.split-two {
+  float: left;
+  width: 30%;
+  left: 0;
+}
+
+.split-two > * {
+  margin-top: 50%;
+  margin-bottom: 50%;
+  /* somebody tell me why the hell this works */
 }
