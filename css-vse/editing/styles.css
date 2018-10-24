@@ -1,3 +1,4 @@
+/* code for tags */
 h1 {
   margin: 0 0;
 }
@@ -10,10 +11,12 @@ video {
   display: block;
 }
 
-/* specialised code for other elements*/
+/* specialised code for other elements */
 .test-wrapper, .test-wrapper-split {
   border: 5px solid grey;
   width: auto;
+  margin: 16px;
+  margin-bottom: 32px;
 }
 
 .test-wrapper > * {
@@ -41,8 +44,6 @@ video {
 
 #video-container-fullwidth {
   width: 100%;
-  /*text-align: center;*/
-  /*position: relative;*/
 }
 
 .effectButton {
