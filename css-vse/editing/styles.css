@@ -86,14 +86,14 @@ video {
   width: 93px;
 }
 
-.below {
+#below {
   /*position: absolute;*/
   /*float: left;*/
   z-index: 1;
   display: inline-block;
 }
 
-.above {
+#above {
   float: left;
   z-index: 2;
 }
