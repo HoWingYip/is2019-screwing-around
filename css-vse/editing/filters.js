@@ -30,28 +30,24 @@ function setGrayscale() {
   //returns existing filter attributes as array
   //cycle through each one to check for grayscale
   //then set it
-  var existingGSAttributeChecker = false;
+  var existingAttributeChecker = false;
   for(var attributeNum in existingFilterAttributes) {
     //checks if there is existing grayscale attribute
     if(existingFilterAttributes[attributeNum].includes("grayscale")) {
-      existingGSAttributeChecker = true;
+      existingAttributeChecker = true;
       existingFilterAttributes[attributeNum] = "grayscale(" + gsValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
-      console.log(existingFilterAttributes);
     }
-    /* else {
-      existingFilterAttributes.push("grayscale(" + gsValue + "%)");
-      console.log(existingFilterAttributes);
-    } */
   }
-
-  if(existingGSAttributeChecker === false) {
+  //if no existing grayscale attribute...
+  if(existingAttributeChecker === false) {
     existingFilterAttributes.push("grayscale(" + gsValue + "%)");
   }
-  //reason for multiple application bug: above loop writes one extra grayscale attribute for each non-grayscale attribute.
+  //bugfix: prevents application of multiple filters in one button press
 
   enterAllAttributes(existingFilterAttributes, video);
   //applies CSS filters to video
+  console.log(existingFilterAttributes);
 }
 
 function setSaturation() {
@@ -76,17 +72,20 @@ function setSaturation() {
   //returns existing filter attributes as array
   //cycle through each one to check for saturation
   //then set it
+  var existingAttributeChecker = false;
   for(var attributeNum in existingFilterAttributes) {
     if(existingFilterAttributes[attributeNum].includes("saturate")) {
+      existingAttributeChecker = true;
       existingFilterAttributes[attributeNum] = "saturate(" + satValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
-    } else {
-      existingFilterAttributes.push("saturate(" + satValue + "%)");
     }
+  }
+  if(existingAttributeChecker === false) {
+    existingFilterAttributes.push("saturate(" + satValue + "%)");
   }
 
   enterAllAttributes(existingFilterAttributes, video);
-  //applies CSS filters to video
+  console.log(existingFilterAttributes);
 }
 
 function setContrast() {
@@ -111,14 +110,18 @@ function setContrast() {
   //returns existing filter attributes as array
   //cycle through each one to check for contrast
   //then set it
+  var existingAttributeChecker = false;
   for(var attributeNum in existingFilterAttributes) {
     if(existingFilterAttributes[attributeNum].includes("contrast")) {
+      existingAttributeChecker = true;
       existingFilterAttributes[attributeNum] = "contrast(" + conValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
-    } else {
-      existingFilterAttributes.push("contrast(" + conValue + "%)");
     }
+  }
+  if(existingAttributeChecker === false) {
+    existingFilterAttributes.push("contrast(" + conValue + "%)");
   }
 
   enterAllAttributes(existingFilterAttributes, video);
+  console.log(existingFilterAttributes);
 }
