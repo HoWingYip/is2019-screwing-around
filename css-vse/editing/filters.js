@@ -3,10 +3,9 @@ var existingFilterAttributes = new Array();
 
 //sets filter attributes
 function enterAllAttributes(existingFilterAttributes, video) {
-  console.log(existingFilterAttributes);
+  //console.log(existingFilterAttributes);
   video.style.filter = existingFilterAttributes.join(" ");
   //solution provided by u/Michelle-Obamas-Arms on Reddit
-  console.log(video.style.filter);
 }
 
 function setGrayscale() {
@@ -31,15 +30,25 @@ function setGrayscale() {
   //returns existing filter attributes as array
   //cycle through each one to check for grayscale
   //then set it
+  var existingGSAttributeChecker = false;
   for(var attributeNum in existingFilterAttributes) {
     //checks if there is existing grayscale attribute
     if(existingFilterAttributes[attributeNum].includes("grayscale")) {
+      existingGSAttributeChecker = true;
       existingFilterAttributes[attributeNum] = "grayscale(" + gsValue + "%)";
       //sets attribute value IN ARRAY ONLY to user-inputted value
-    } else {
-      existingFilterAttributes.push("grayscale(" + gsValue + "%)");
+      console.log(existingFilterAttributes);
     }
+    /* else {
+      existingFilterAttributes.push("grayscale(" + gsValue + "%)");
+      console.log(existingFilterAttributes);
+    } */
   }
+
+  if(existingGSAttributeChecker === false) {
+    existingFilterAttributes.push("grayscale(" + gsValue + "%)");
+  }
+  //reason for multiple application bug: above loop writes one extra grayscale attribute for each non-grayscale attribute.
 
   enterAllAttributes(existingFilterAttributes, video);
   //applies CSS filters to video
