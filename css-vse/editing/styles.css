@@ -98,7 +98,7 @@ video {
   z-index: 2;
 }
 
-.split-one, .split-two {
+#split-right, #split-left {
   vertical-align: bottom;
   text-align: center;
   position: relative;
@@ -107,7 +107,7 @@ video {
   display: inline-block;
 }
 
-.split-one {
+#split-right {
   padding-top: 4%;
   padding-bottom: 4%;
   /* I am the worst web developer to ever walk the face of the Earth. */
@@ -115,13 +115,13 @@ video {
   border-left: 5px solid grey;
 }
 
-.split-two {
+#split-left {
   float: left;
   width: 30%;
   left: 0;
 }
 
-.split-two > * {
+#split-left > * {
   margin-top: 50%;
   margin-bottom: 50%;
   /* somebody tell me why the hell this works */
