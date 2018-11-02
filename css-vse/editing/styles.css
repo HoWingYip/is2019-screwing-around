@@ -1,9 +1,5 @@
 /* code for tags */
-h1 {
-  margin: 0 0;
-}
-
-h2 {
+h1, h2 {
   margin: 0 0;
 }
 
@@ -87,15 +83,15 @@ video {
 }
 
 #below {
-  /*position: absolute;*/
-  /*float: left;*/
   z-index: 1;
   display: inline-block;
+  position: relative;
 }
 
 #above {
   float: left;
   z-index: 2;
+  position: relative;
 }
 
 #split-right, #split-left {
