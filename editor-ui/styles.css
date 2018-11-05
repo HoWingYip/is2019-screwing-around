@@ -1,0 +1,40 @@
+/* code for tags */
+html, body {
+  height: 100%;
+}
+
+html {
+  background-color: rgb(48, 48, 48);
+}
+
+body {
+  padding: 16px;
+  /* overrides default w3.css */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+video {
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* specialised code for other elements */
+.video-panel, .video-panel-second {
+  background-color: rgb(75, 75, 75);
+  color: rgb(185, 185, 185);
+  width: calc(50% - 11px);
+  padding: 24px; 
+  display: inline-block;
+  text-align: center;
+  overflow: auto;
+}
+
+.video-panel-second {
+  margin-left: 16px;
+}
+
+.control-button {
+  margin-left: 16px;
+  margin-right: 16px;
+  display: inline-block;
+}
