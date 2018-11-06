@@ -13,23 +13,29 @@
   <div class="video-panel w3-round">
     <video id="source-video" src="/css-vse/assets/PostingLetter.MOV" height="75%" width="75%">Video not displayed.</video>
     <div class="controls">
-      <img src="icons/pngs/SkipToStart.png" alt="Skip to start" class="control-button" width="27px" height="25px" />
+      <input type="range" class="scrubber" id="sourceScrubber" value="0">
+      <img src="icons/pngs/SkipToStart.png" alt="Skip to start" class="control-button" width="27px" height="25px"
+      id="sourceSkipToStart" onclick="sourceSkipToStart()" />
       <img src="icons/pngs/Rewind.png" alt="Rewind" class="control-button" width="50px" height="25px" />
       <img src="icons/pngs/Play.png" alt="Play" class="control-button" width="25px" height="25px" 
       id="sourcePlayPause" onclick="sourcePlayPause()" />
       <img src="icons/pngs/FastForward.png" alt="Rewind" class="control-button" width="50px" height="25px" />
-      <img src="icons/pngs/SkipToEnd.png" alt="Skip to start" class="control-button" width="27px" height="25px" />
+      <img src="icons/pngs/SkipToEnd.png" alt="Skip to start" class="control-button" width="27px" height="25px"
+      id="sourceSkipToEnd" onclick="sourceSkipToEnd()" />
     </div>
   </div>
   <div class="video-panel-second w3-round">
     <video id="timeline-video" src="/css-vse/assets/Walking.MOV" height="75%" width="75%">Video not displayed.</video>
     <div class="controls">
-      <img src="icons/pngs/SkipToStart.png" alt="Skip to start" class="control-button" width="27px" height="25px" />
+      <input type="range" class="scrubber" id="timelineScrubber" value="0">
+      <img src="icons/pngs/SkipToStart.png" alt="Skip to start" class="control-button" width="27px" height="25px" 
+      id="timelineSkipToStart" onclick="timelineSkipToStart()" />
       <img src="icons/pngs/Rewind.png" alt="Rewind" class="control-button" width="50px" height="25px" />
       <img src="icons/pngs/Play.png" alt="Play" class="control-button" width="25px" height="25px"
       id="timelinePlayPause" onclick="timelinePlayPause()" />
       <img src="icons/pngs/FastForward.png" alt="Rewind" class="control-button" width="50px" height="25px" />
-      <img src="icons/pngs/SkipToEnd.png" alt="Skip to start" class="control-button" width="27px" height="25px" />
+      <img src="icons/pngs/SkipToEnd.png" alt="Skip to start" class="control-button" width="27px" height="25px"
+      id="timelineSkipToEnd" onclick="timelineSkipToEnd()" />
     </div>
   </div>
 </body>
