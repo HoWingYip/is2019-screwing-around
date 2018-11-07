@@ -54,8 +54,8 @@ video {
 }
 
 .scrubber {
-  width: 100%;
-  display: block;
+  width: calc(100% - 15em); /* makes space for timers */
+  display: inline-block;
   margin-left: auto; /* centering */
   margin-right: auto; /* centering */
   margin-bottom: 24px;
@@ -83,4 +83,12 @@ video {
   border-radius: 50%;
   border: 1px solid grey;
   cursor: pointer;
+}
+
+.timer {
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 20px;
+  vertical-align: middle;
+  display: inline-block;
 }
