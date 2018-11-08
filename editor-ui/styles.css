@@ -19,13 +19,11 @@ video {
 }
 
 /* specialised code for other elements */
-.video-panel, .video-panel-second {
+.video-panel, .video-panel-second, .panel {
   background-color: rgb(75, 75, 75);
   color: rgb(185, 185, 185);
-  width: calc(50% - 11px);
   padding: 24px; 
   display: inline-block;
-  text-align: center;
   overflow: auto;
 
   /* disallow selection within panels */
@@ -33,6 +31,15 @@ video {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.video-panel, .video-panel-second {
+  width: calc(50% - 11px);
+  text-align: center;
+}
+
+.panel {
+  margin-top: 16px;
 }
 
 .video-panel-second {
