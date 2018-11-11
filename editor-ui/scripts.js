@@ -107,6 +107,24 @@ window.onload = () => {
       sourceCurrentTimeIndicator.innerHTML = currentMinutes + ":" + ("0" + Math.floor(currentSeconds)).slice(-2);
     }
   });
+
+  /* play/pause icon change functions */
+
+  //update timeline play/pause button
+  timelineVideo.onplay = () => {
+    timelinePlayPauseButton.src = "icons/pngs/Pause.png";
+  };
+  timelineVideo.onpause = () => {
+    timelinePlayPauseButton.src = "icons/pngs/Play.png";
+  };
+
+  //update source play/pause button
+  sourceVideo.onplay = () => {
+    sourcePlayPauseButton.src = "icons/pngs/Pause.png";
+  };
+  sourceVideo.onpause = () => {
+    sourcePlayPauseButton.src = "icons/pngs/Play.png";
+  };
 };
 
 /* skip to start functions */
@@ -143,10 +161,8 @@ function timelinePlayPause() {
   //play the video and change icon
   if(timelineVideo.playing) {
     timelineVideo.pause();
-    timelinePlayPauseButton.src = "icons/pngs/Play.png";
   } else if(timelineVideo.paused) {
     timelineVideo.play();
-    timelinePlayPauseButton.src = "icons/pngs/Pause.png";
   }
 }
 
@@ -158,10 +174,8 @@ function sourcePlayPause() {
   //play the video and change icon
   if(sourceVideo.playing) {
     sourceVideo.pause();
-    sourcePlayPauseButton.src = "icons/pngs/Play.png";
   } else if(sourceVideo.paused) {
     sourceVideo.play();
-    sourcePlayPauseButton.src = "icons/pngs/Pause.png";
   }
 }
 
