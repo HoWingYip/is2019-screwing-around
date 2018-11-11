@@ -154,11 +154,10 @@ function sourceSkipToStart() {
 /* play/pause functions */
 
 function timelinePlayPause() {
-  //initialise video and play/pause button elements as JS vars
+  //initialise video element as JS var
   var timelineVideo = document.getElementById("timeline-video");
-  var timelinePlayPauseButton = document.getElementById("timelinePlayPause");
 
-  //play the video and change icon
+  //play the video
   if(timelineVideo.playing) {
     timelineVideo.pause();
   } else if(timelineVideo.paused) {
@@ -167,11 +166,10 @@ function timelinePlayPause() {
 }
 
 function sourcePlayPause() {
-  //initialise video and play/pause button elements as JS vars
+  //initialise video element as JS var
   var sourceVideo = document.getElementById("source-video");
-  var sourcePlayPauseButton = document.getElementById("sourcePlayPause");
 
-  //play the video and change icon
+  //play the video
   if(sourceVideo.playing) {
     sourceVideo.pause();
   } else if(sourceVideo.paused) {
